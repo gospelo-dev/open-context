@@ -125,6 +125,21 @@
       "ecosystem": "npm",
       "package": "npm",
       "baseline": "11.18.0"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "esbuild",
+      "baseline": "0.28.1"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@babel/core",
+      "baseline": "8.0.1"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "core-js",
+      "baseline": "3.49.0"
     }
   ]
 }
