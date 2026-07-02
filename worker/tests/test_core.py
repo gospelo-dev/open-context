@@ -47,6 +47,11 @@ def test_candidate_tags_scoped_uses_short_name():
     assert "core@7.25.0" in tags  # short (unscoped) variant
 
 
+def test_candidate_tags_sqlalchemy_rel_underscore():
+    tags = vr._candidate_tags("2.0.51", "sqlalchemy")
+    assert "rel_2_0_51" in tags  # SQLAlchemy underscore tag scheme
+
+
 def test_digits():
     assert vr._digits("v15.1.0") == "15.1.0"
     assert vr._digits("next@15.1.0") == "15.1.0"

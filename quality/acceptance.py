@@ -71,10 +71,11 @@ def _parse_pin(text):
 
 
 def _tag_version(tag):
-    """Version digits from a git tag: 'v1.2.3' / '1.2.3' / '@scope/pkg@1.2.3'."""
+    """Version digits from a git tag: 'v1.2.3' / '@scope/pkg@1.2.3' / 'rel_2_0_51'."""
     tail = tag.rsplit("@", 1)[-1]           # drop scoped-name prefix (e.g. @builder.io/qwik@)
     tail = tail[1:] if tail[:1] == "v" else tail
-    return _digits(tail)
+    tail = tail.replace("_", ".")           # SQLAlchemy style: rel_2_0_51 -> rel.2.0.51
+    return _digits(tail).strip(".")
 
 
 def check(endpoint, token, pkg, version, eco):

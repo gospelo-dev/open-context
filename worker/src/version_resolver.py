@@ -36,6 +36,7 @@ def _candidate_tags(version: str, package: str) -> list[str]:
         f"{package}-{version}",          # python style (e.g. Django-5.0)
         f"{short}-{version}",
         f"release-{version}",
+        f"rel_{version.replace('.', '_')}",   # SQLAlchemy style (rel_2_0_51)
     ]
     seen = set()
     out = []
