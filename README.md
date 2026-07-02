@@ -72,6 +72,49 @@ Typical flow: `get_readme` → `get_documentation_tree` → `get_outline` → `r
 
 ---
 
+## Continuous verification
+
+A daily GitHub Actions job (deterministic, **no LLM, zero tokens**) re-checks a set of popular packages against the live server and opens an issue on any regression. For each package it verifies version resolution (correct git tag), README, version match, docs tree, and file reads.
+
+**Version-precision rule** — a package is version-precise when its GitHub repo publishes a **git tag** for the release. The resolver matches common conventions: `v1.2.3`, `1.2.3`, `pkg@1.2.3` (monorepos), `pkg-1.2.3`, `rel_1_2_3` (SQLAlchemy-style). If a repo does **not** tag releases (some changesets-based projects), the server falls back to the default branch — still useful, but not pinned to the exact version.
+
+**What's monitored** — the live list is [`quality/baseline.json`](https://github.com/gospelo-dev/open-context/blob/main/quality/baseline.json). Breakdown by category:
+
+<!-- BEGIN:monitored (auto-generated from quality/baseline.json — do not edit by hand) -->
+| Category | Count |
+|---|---|
+| `frontend-framework` | 9 |
+| `orm-db` | 6 |
+| `rag-vectordb` | 6 |
+| `build-tool` | 5 |
+| `package-manager` | 5 |
+| `rag-ml` | 5 |
+| `ai-sdk` | 4 |
+| `backend-framework` | 4 |
+| `testing` | 4 |
+| `webassembly` | 4 |
+| `cli-tui` | 3 |
+| `data-fetching` | 3 |
+| `http-async` | 3 |
+| `lint-format` | 3 |
+| `mcp` | 3 |
+| `state-management` | 3 |
+| `agent` | 2 |
+| `ui-components` | 2 |
+| `validation` | 2 |
+| `animation` | 1 |
+| `forms` | 1 |
+| `infra-iac` | 1 |
+| `styling` | 1 |
+| **Total** | **80** |
+<!-- END:monitored -->
+
+
+
+**Intentionally excluded** — packages whose repos don't tag releases (e.g. Radix UI, SolidJS, SvelteKit's latest, LangChain) can't be version-precise, so they're left out rather than silently served from the default branch. Language specs (ES5) and OS shells (bash/zsh) are out of scope by design.
+
+---
+
 ## Trust & security
 
 This server receives your GitHub token, so it is designed to earn that trust — and to be auditable:

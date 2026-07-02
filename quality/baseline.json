@@ -2,404 +2,484 @@
   "endpoint": "https://open-context.gospelo.dev",
   "packages": [
     {
-      "ecosystem": "npm",
-      "package": "typescript",
-      "baseline": "6.0.3"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "react",
-      "baseline": "19.2.7"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "requests",
-      "baseline": "2.34.2"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "fastapi",
-      "baseline": "0.139.0"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "pydantic",
-      "baseline": "2.13.4"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "anthropic",
-      "baseline": "0.115.1"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "openai",
-      "baseline": "2.44.0"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "@anthropic-ai/sdk",
-      "baseline": "0.109.1"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "openai",
-      "baseline": "6.45.0"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "aws-cdk-lib",
-      "baseline": "2.260.0"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "tailwindcss",
-      "baseline": "4.3.2"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "astro",
-      "baseline": "7.0.5"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "vite",
-      "baseline": "8.1.3"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "next",
-      "baseline": "16.2.10"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "svelte",
-      "baseline": "5.56.4"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "nuxt",
-      "baseline": "4.4.8"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "vue",
-      "baseline": "3.5.39"
-    },
-    {
+      "category": "frontend-framework",
       "ecosystem": "npm",
       "package": "@builder.io/qwik",
       "baseline": "1.20.0"
     },
     {
+      "category": "frontend-framework",
       "ecosystem": "npm",
-      "package": "hono",
-      "baseline": "4.12.27"
+      "package": "astro",
+      "baseline": "7.0.5"
     },
     {
+      "category": "frontend-framework",
       "ecosystem": "npm",
-      "package": "react-router",
-      "baseline": "8.1.0"
+      "package": "next",
+      "baseline": "16.2.10"
     },
     {
+      "category": "frontend-framework",
       "ecosystem": "npm",
-      "package": "prettier",
-      "baseline": "3.9.4"
+      "package": "nuxt",
+      "baseline": "4.4.8"
     },
     {
+      "category": "frontend-framework",
       "ecosystem": "npm",
-      "package": "eslint",
-      "baseline": "10.6.0"
+      "package": "react",
+      "baseline": "19.2.7"
     },
     {
-      "ecosystem": "npm",
-      "package": "pnpm",
-      "baseline": "11.9.0"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "bun",
-      "baseline": "1.3.14"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "npm",
-      "baseline": "11.18.0"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "esbuild",
-      "baseline": "0.28.1"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "@babel/core",
-      "baseline": "8.0.1"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "core-js",
-      "baseline": "3.49.0"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "@prisma/client",
-      "baseline": "7.8.0"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "drizzle-orm",
-      "baseline": "0.45.2"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "typeorm",
-      "baseline": "1.0.0"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "sqlmodel",
-      "baseline": "0.0.39"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "sqlalchemy",
-      "baseline": "2.0.51"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "pytest",
-      "baseline": "9.1.1"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "poetry",
-      "baseline": "2.4.1"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "uv",
-      "baseline": "0.11.26"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "alembic",
-      "baseline": "1.18.5"
-    },
-    {
+      "category": "frontend-framework",
       "ecosystem": "npm",
       "package": "react-dom",
       "baseline": "19.2.7"
     },
     {
-      "ecosystem": "pypi",
-      "package": "ruff",
-      "baseline": "0.15.20"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "mcp",
-      "baseline": "1.28.1"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "fastmcp",
-      "baseline": "3.4.2"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "pydantic-ai",
-      "baseline": "2.3.0"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "langgraph",
-      "baseline": "1.2.7"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "httpx",
-      "baseline": "0.28.1"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "starlette",
-      "baseline": "1.3.1"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "uvicorn",
-      "baseline": "0.49.0"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "anyio",
-      "baseline": "4.14.1"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "typer",
-      "baseline": "0.26.8"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "click",
-      "baseline": "8.4.2"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "rich",
-      "baseline": "15.0.0"
-    },
-    {
+      "category": "frontend-framework",
       "ecosystem": "npm",
-      "package": "@modelcontextprotocol/sdk",
-      "baseline": "1.29.0"
+      "package": "react-router",
+      "baseline": "8.1.0"
     },
     {
+      "category": "frontend-framework",
       "ecosystem": "npm",
-      "package": "zod",
-      "baseline": "4.4.3"
+      "package": "svelte",
+      "baseline": "5.56.4"
     },
     {
-      "ecosystem": "pypi",
-      "package": "chromadb",
-      "baseline": "1.5.9"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "qdrant-client",
-      "baseline": "1.18.0"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "weaviate-client",
-      "baseline": "4.22.0"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "pinecone",
-      "baseline": "9.1.0"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "pgvector",
-      "baseline": "0.4.2"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "pymilvus",
-      "baseline": "3.0.0"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "llama-index",
-      "baseline": "0.14.23"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "sentence-transformers",
-      "baseline": "5.6.0"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "haystack-ai",
-      "baseline": "2.30.2"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "transformers",
-      "baseline": "5.12.1"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "tiktoken",
-      "baseline": "0.13.0"
-    },
-    {
+      "category": "frontend-framework",
       "ecosystem": "npm",
-      "package": "assemblyscript",
-      "baseline": "0.28.19"
+      "package": "vue",
+      "baseline": "3.5.39"
     },
     {
-      "ecosystem": "npm",
-      "package": "wabt",
-      "baseline": "1.0.39"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "binaryen",
-      "baseline": "130.0.0"
-    },
-    {
-      "ecosystem": "pypi",
-      "package": "wasmtime",
-      "baseline": "46.0.1"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "zustand",
-      "baseline": "5.0.14"
-    },
-    {
+      "category": "state-management",
       "ecosystem": "npm",
       "package": "@reduxjs/toolkit",
       "baseline": "2.12.0"
     },
     {
+      "category": "state-management",
       "ecosystem": "npm",
       "package": "jotai",
       "baseline": "2.20.1"
     },
     {
+      "category": "state-management",
+      "ecosystem": "npm",
+      "package": "zustand",
+      "baseline": "5.0.14"
+    },
+    {
+      "category": "data-fetching",
       "ecosystem": "npm",
       "package": "@tanstack/react-query",
       "baseline": "5.101.2"
     },
     {
-      "ecosystem": "npm",
-      "package": "swr",
-      "baseline": "2.4.2"
-    },
-    {
+      "category": "data-fetching",
       "ecosystem": "npm",
       "package": "axios",
       "baseline": "1.18.1"
     },
     {
+      "category": "data-fetching",
+      "ecosystem": "npm",
+      "package": "swr",
+      "baseline": "2.4.2"
+    },
+    {
+      "category": "forms",
       "ecosystem": "npm",
       "package": "react-hook-form",
       "baseline": "7.80.0"
     },
     {
-      "ecosystem": "npm",
-      "package": "vitest",
-      "baseline": "4.1.9"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "@playwright/test",
-      "baseline": "1.61.1"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "@testing-library/react",
-      "baseline": "16.3.2"
-    },
-    {
-      "ecosystem": "npm",
-      "package": "@mui/material",
-      "baseline": "9.1.2"
-    },
-    {
+      "category": "ui-components",
       "ecosystem": "npm",
       "package": "@chakra-ui/react",
       "baseline": "3.36.0"
     },
     {
+      "category": "ui-components",
+      "ecosystem": "npm",
+      "package": "@mui/material",
+      "baseline": "9.1.2"
+    },
+    {
+      "category": "animation",
       "ecosystem": "npm",
       "package": "motion",
       "baseline": "12.42.2"
+    },
+    {
+      "category": "styling",
+      "ecosystem": "npm",
+      "package": "tailwindcss",
+      "baseline": "4.3.2"
+    },
+    {
+      "category": "build-tool",
+      "ecosystem": "npm",
+      "package": "@babel/core",
+      "baseline": "8.0.1"
+    },
+    {
+      "category": "build-tool",
+      "ecosystem": "npm",
+      "package": "core-js",
+      "baseline": "3.49.0"
+    },
+    {
+      "category": "build-tool",
+      "ecosystem": "npm",
+      "package": "esbuild",
+      "baseline": "0.28.1"
+    },
+    {
+      "category": "build-tool",
+      "ecosystem": "npm",
+      "package": "typescript",
+      "baseline": "6.0.3"
+    },
+    {
+      "category": "build-tool",
+      "ecosystem": "npm",
+      "package": "vite",
+      "baseline": "8.1.3"
+    },
+    {
+      "category": "lint-format",
+      "ecosystem": "npm",
+      "package": "eslint",
+      "baseline": "10.6.0"
+    },
+    {
+      "category": "lint-format",
+      "ecosystem": "npm",
+      "package": "prettier",
+      "baseline": "3.9.4"
+    },
+    {
+      "category": "lint-format",
+      "ecosystem": "pypi",
+      "package": "ruff",
+      "baseline": "0.15.20"
+    },
+    {
+      "category": "testing",
+      "ecosystem": "npm",
+      "package": "@playwright/test",
+      "baseline": "1.61.1"
+    },
+    {
+      "category": "testing",
+      "ecosystem": "npm",
+      "package": "@testing-library/react",
+      "baseline": "16.3.2"
+    },
+    {
+      "category": "testing",
+      "ecosystem": "npm",
+      "package": "vitest",
+      "baseline": "4.1.9"
+    },
+    {
+      "category": "testing",
+      "ecosystem": "pypi",
+      "package": "pytest",
+      "baseline": "9.1.1"
+    },
+    {
+      "category": "package-manager",
+      "ecosystem": "npm",
+      "package": "bun",
+      "baseline": "1.3.14"
+    },
+    {
+      "category": "package-manager",
+      "ecosystem": "npm",
+      "package": "npm",
+      "baseline": "11.18.0"
+    },
+    {
+      "category": "package-manager",
+      "ecosystem": "npm",
+      "package": "pnpm",
+      "baseline": "11.9.0"
+    },
+    {
+      "category": "package-manager",
+      "ecosystem": "pypi",
+      "package": "poetry",
+      "baseline": "2.4.1"
+    },
+    {
+      "category": "package-manager",
+      "ecosystem": "pypi",
+      "package": "uv",
+      "baseline": "0.11.26"
+    },
+    {
+      "category": "backend-framework",
+      "ecosystem": "npm",
+      "package": "hono",
+      "baseline": "4.12.27"
+    },
+    {
+      "category": "backend-framework",
+      "ecosystem": "pypi",
+      "package": "fastapi",
+      "baseline": "0.139.0"
+    },
+    {
+      "category": "backend-framework",
+      "ecosystem": "pypi",
+      "package": "starlette",
+      "baseline": "1.3.1"
+    },
+    {
+      "category": "backend-framework",
+      "ecosystem": "pypi",
+      "package": "uvicorn",
+      "baseline": "0.49.0"
+    },
+    {
+      "category": "http-async",
+      "ecosystem": "pypi",
+      "package": "anyio",
+      "baseline": "4.14.1"
+    },
+    {
+      "category": "http-async",
+      "ecosystem": "pypi",
+      "package": "httpx",
+      "baseline": "0.28.1"
+    },
+    {
+      "category": "http-async",
+      "ecosystem": "pypi",
+      "package": "requests",
+      "baseline": "2.34.2"
+    },
+    {
+      "category": "cli-tui",
+      "ecosystem": "pypi",
+      "package": "click",
+      "baseline": "8.4.2"
+    },
+    {
+      "category": "cli-tui",
+      "ecosystem": "pypi",
+      "package": "rich",
+      "baseline": "15.0.0"
+    },
+    {
+      "category": "cli-tui",
+      "ecosystem": "pypi",
+      "package": "typer",
+      "baseline": "0.26.8"
+    },
+    {
+      "category": "validation",
+      "ecosystem": "npm",
+      "package": "zod",
+      "baseline": "4.4.3"
+    },
+    {
+      "category": "validation",
+      "ecosystem": "pypi",
+      "package": "pydantic",
+      "baseline": "2.13.4"
+    },
+    {
+      "category": "ai-sdk",
+      "ecosystem": "npm",
+      "package": "@anthropic-ai/sdk",
+      "baseline": "0.109.1"
+    },
+    {
+      "category": "ai-sdk",
+      "ecosystem": "npm",
+      "package": "openai",
+      "baseline": "6.45.0"
+    },
+    {
+      "category": "ai-sdk",
+      "ecosystem": "pypi",
+      "package": "anthropic",
+      "baseline": "0.115.1"
+    },
+    {
+      "category": "ai-sdk",
+      "ecosystem": "pypi",
+      "package": "openai",
+      "baseline": "2.44.0"
+    },
+    {
+      "category": "mcp",
+      "ecosystem": "npm",
+      "package": "@modelcontextprotocol/sdk",
+      "baseline": "1.29.0"
+    },
+    {
+      "category": "mcp",
+      "ecosystem": "pypi",
+      "package": "fastmcp",
+      "baseline": "3.4.2"
+    },
+    {
+      "category": "mcp",
+      "ecosystem": "pypi",
+      "package": "mcp",
+      "baseline": "1.28.1"
+    },
+    {
+      "category": "agent",
+      "ecosystem": "pypi",
+      "package": "langgraph",
+      "baseline": "1.2.7"
+    },
+    {
+      "category": "agent",
+      "ecosystem": "pypi",
+      "package": "pydantic-ai",
+      "baseline": "2.3.0"
+    },
+    {
+      "category": "rag-vectordb",
+      "ecosystem": "pypi",
+      "package": "chromadb",
+      "baseline": "1.5.9"
+    },
+    {
+      "category": "rag-vectordb",
+      "ecosystem": "pypi",
+      "package": "pgvector",
+      "baseline": "0.4.2"
+    },
+    {
+      "category": "rag-vectordb",
+      "ecosystem": "pypi",
+      "package": "pinecone",
+      "baseline": "9.1.0"
+    },
+    {
+      "category": "rag-vectordb",
+      "ecosystem": "pypi",
+      "package": "pymilvus",
+      "baseline": "3.0.0"
+    },
+    {
+      "category": "rag-vectordb",
+      "ecosystem": "pypi",
+      "package": "qdrant-client",
+      "baseline": "1.18.0"
+    },
+    {
+      "category": "rag-vectordb",
+      "ecosystem": "pypi",
+      "package": "weaviate-client",
+      "baseline": "4.22.0"
+    },
+    {
+      "category": "rag-ml",
+      "ecosystem": "pypi",
+      "package": "haystack-ai",
+      "baseline": "2.30.2"
+    },
+    {
+      "category": "rag-ml",
+      "ecosystem": "pypi",
+      "package": "llama-index",
+      "baseline": "0.14.23"
+    },
+    {
+      "category": "rag-ml",
+      "ecosystem": "pypi",
+      "package": "sentence-transformers",
+      "baseline": "5.6.0"
+    },
+    {
+      "category": "rag-ml",
+      "ecosystem": "pypi",
+      "package": "tiktoken",
+      "baseline": "0.13.0"
+    },
+    {
+      "category": "rag-ml",
+      "ecosystem": "pypi",
+      "package": "transformers",
+      "baseline": "5.12.1"
+    },
+    {
+      "category": "orm-db",
+      "ecosystem": "npm",
+      "package": "@prisma/client",
+      "baseline": "7.8.0"
+    },
+    {
+      "category": "orm-db",
+      "ecosystem": "npm",
+      "package": "drizzle-orm",
+      "baseline": "0.45.2"
+    },
+    {
+      "category": "orm-db",
+      "ecosystem": "npm",
+      "package": "typeorm",
+      "baseline": "1.0.0"
+    },
+    {
+      "category": "orm-db",
+      "ecosystem": "pypi",
+      "package": "alembic",
+      "baseline": "1.18.5"
+    },
+    {
+      "category": "orm-db",
+      "ecosystem": "pypi",
+      "package": "sqlalchemy",
+      "baseline": "2.0.51"
+    },
+    {
+      "category": "orm-db",
+      "ecosystem": "pypi",
+      "package": "sqlmodel",
+      "baseline": "0.0.39"
+    },
+    {
+      "category": "webassembly",
+      "ecosystem": "npm",
+      "package": "assemblyscript",
+      "baseline": "0.28.19"
+    },
+    {
+      "category": "webassembly",
+      "ecosystem": "npm",
+      "package": "binaryen",
+      "baseline": "130.0.0"
+    },
+    {
+      "category": "webassembly",
+      "ecosystem": "npm",
+      "package": "wabt",
+      "baseline": "1.0.39"
+    },
+    {
+      "category": "webassembly",
+      "ecosystem": "pypi",
+      "package": "wasmtime",
+      "baseline": "46.0.1"
+    },
+    {
+      "category": "infra-iac",
+      "ecosystem": "npm",
+      "package": "aws-cdk-lib",
+      "baseline": "2.260.0"
     }
   ]
 }
