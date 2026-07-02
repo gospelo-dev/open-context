@@ -55,6 +55,16 @@
       "ecosystem": "npm",
       "package": "tailwindcss",
       "baseline": "4.3.2"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "astro",
+      "baseline": "7.0.5"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "vite",
+      "baseline": "8.1.3"
     }
   ]
 }
