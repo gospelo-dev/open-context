@@ -140,6 +140,31 @@
       "ecosystem": "npm",
       "package": "core-js",
       "baseline": "3.49.0"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@prisma/client",
+      "baseline": "7.8.0"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "drizzle-orm",
+      "baseline": "0.45.2"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "typeorm",
+      "baseline": "1.0.0"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "sqlmodel",
+      "baseline": "0.0.39"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "sqlalchemy",
+      "baseline": "2.0.51"
     }
   ]
 }
