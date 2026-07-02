@@ -50,6 +50,11 @@
       "ecosystem": "npm",
       "package": "aws-cdk-lib",
       "baseline": "2.260.0"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "tailwindcss",
+      "baseline": "4.3.2"
     }
   ]
 }
