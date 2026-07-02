@@ -65,6 +65,26 @@
       "ecosystem": "npm",
       "package": "vite",
       "baseline": "8.1.3"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "next",
+      "baseline": "16.2.10"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "svelte",
+      "baseline": "5.56.4"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "nuxt",
+      "baseline": "4.4.8"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "vue",
+      "baseline": "3.5.39"
     }
   ]
 }
