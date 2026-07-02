@@ -85,6 +85,21 @@
       "ecosystem": "npm",
       "package": "vue",
       "baseline": "3.5.39"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@builder.io/qwik",
+      "baseline": "1.20.0"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "hono",
+      "baseline": "4.12.27"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "react-router",
+      "baseline": "8.1.0"
     }
   ]
 }
