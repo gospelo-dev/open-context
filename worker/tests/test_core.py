@@ -8,6 +8,7 @@ import mcp_handler as mh
 import chunker
 import overrides
 import registry_pypi
+import auth_resolver
 
 
 # --- github_client.normalize_repo_url -------------------------------------
@@ -266,6 +267,17 @@ def test_overrides_lookup():
     assert ts["docs"]["ref"] == "v2"
     assert overrides.get_override("npm", "left-pad") is None
     assert overrides.get_override("pypi", "react") is None
+
+
+def test_looks_like_github_token():
+    f = auth_resolver._looks_like_github_token
+    assert f("ghp_abc123") is True
+    assert f("github_pat_11ABC") is True
+    assert f("gho_x") is True
+    assert f("ghs_x") is True
+    # our own OAuth-issued opaque tokens are token_urlsafe(32), no gh prefix
+    assert f("kJ8nQ2mZ...") is False
+    assert f("") is False
 
 
 def test_contexts_text():

@@ -1,7 +1,25 @@
-"""Shared auth resolution for the MCP entrypoint (GitHub OAuth Bearer tokens)."""
+"""Shared auth resolution for the MCP entrypoint.
+
+Two auth methods, both giving a per-user GitHub token (BYO — each user's own
+account / rate limit / repo access):
+
+1. BYO PAT (primary): the user supplies their own GitHub token via the
+   `X-GitHub-Token` header, or `Authorization: Bearer <github-token>`. No OAuth
+   App registration or server secrets required. The token is validated once via
+   GET /user and cached (token-hash -> identity) in KV for an hour.
+2. OAuth 2.1 (optional): our own issued Bearer token -> stored per-user GitHub
+   token. Requires the GitHub OAuth App secrets to be configured.
+"""
+
+import hashlib
+import json
 
 SCOPES_SUPPORTED = ("mcp:read", "mcp:tools")
 REALM = "gospelo-open-context"
+
+# GitHub token prefixes (classic PAT, fine-grained PAT, OAuth/app tokens).
+_GH_TOKEN_PREFIXES = ("ghp_", "gho_", "ghu_", "ghs_", "ghr_", "github_pat_")
+_BYO_CACHE_TTL = 3600  # seconds to cache a validated PAT -> identity
 
 
 def extract_origin(request) -> str:
@@ -27,18 +45,76 @@ def www_authenticate_header(request) -> str:
     )
 
 
-async def resolve_auth_context(request, env) -> dict | None:
-    """Resolve a Bearer token to an auth context, or None.
+def _looks_like_github_token(tok: str) -> bool:
+    return bool(tok) and tok.startswith(_GH_TOKEN_PREFIXES)
 
-    Returns: {user_sub, login, github_token} — github_token is the per-user
-    GitHub OAuth token used for all downstream GitHub API calls.
+
+async def _resolve_byo_pat(env, token: str) -> dict | None:
+    """Validate a user-supplied GitHub token (BYO PAT) and return auth context.
+
+    Validated once via GET /user, then cached (token hash -> identity) in KV.
     """
+    import github_client
+
+    kv = getattr(env, "AUTH_KV", None)
+    cache_key = "byotok:" + hashlib.sha256(token.encode()).hexdigest()[:20]
+
+    if kv is not None:
+        raw = await kv.get(cache_key)
+        if raw:
+            try:
+                rec = json.loads(raw)
+                return {"user_sub": rec["user_sub"], "login": rec.get("login", ""), "github_token": token}
+            except (json.JSONDecodeError, TypeError, KeyError):
+                pass
+
+    r = await github_client.gh_get_json(token, "/user")
+    if r["status"] != 200 or not r["json"]:
+        return None
+    user_sub = str(r["json"].get("id") or "")
+    login = r["json"].get("login") or ""
+    if not user_sub:
+        return None
+
+    if kv is not None:
+        try:
+            await kv.put(
+                cache_key,
+                json.dumps({"user_sub": user_sub, "login": login}),
+                {"expirationTtl": _BYO_CACHE_TTL},
+            )
+        except Exception:
+            pass
+
+    return {"user_sub": user_sub, "login": login, "github_token": token}
+
+
+async def resolve_auth_context(request, env) -> dict | None:
+    """Resolve auth to {user_sub, login, github_token}, or None.
+
+    Priority: X-GitHub-Token header, then Authorization: Bearer. A Bearer value
+    that looks like a GitHub token is treated as a BYO PAT; otherwise it is
+    looked up as an OAuth-issued token.
+    """
+    # 1. BYO PAT via dedicated header.
+    pat = request.headers.get("X-GitHub-Token") or request.headers.get("x-github-token")
+    if pat and pat.strip():
+        return await _resolve_byo_pat(env, pat.strip())
+
     auth = request.headers.get("Authorization") or request.headers.get("authorization")
     if not auth or not auth.lower().startswith("bearer "):
         return None
     token = auth[7:].strip()
+    if not token:
+        return None
+
+    # 2. Bearer value that is itself a GitHub token -> BYO PAT.
+    if _looks_like_github_token(token):
+        return await _resolve_byo_pat(env, token)
+
+    # 3. Otherwise treat as an OAuth-issued token (requires OAuth configured).
     kv = getattr(env, "AUTH_KV", None)
-    if kv is None or not token:
+    if kv is None:
         return None
 
     import oauth_store

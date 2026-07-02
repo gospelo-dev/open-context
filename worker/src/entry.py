@@ -43,7 +43,7 @@ def cors_headers() -> dict:
     return {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET, POST, DELETE, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization, Mcp-Session-Id, Accept, X-Debug-Github-Token",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization, Mcp-Session-Id, Accept, X-GitHub-Token, X-Debug-Github-Token",
         "Access-Control-Expose-Headers": "Mcp-Session-Id, WWW-Authenticate",
     }
 

@@ -21,6 +21,8 @@ CLAUDE.md
 # Secrets — never commit
 .dev.vars
 *.dev.vars
+# MCP client config (may contain a GitHub token)
+.mcp.json
 
 # Local-only development docs / changelog / scripts
 development/

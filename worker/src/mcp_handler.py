@@ -280,7 +280,7 @@ def _cors_headers() -> dict:
     return {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET, POST, DELETE, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization, Mcp-Session-Id, Accept, X-Debug-Github-Token",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization, Mcp-Session-Id, Accept, X-GitHub-Token, X-Debug-Github-Token",
         "Access-Control-Expose-Headers": "Mcp-Session-Id, WWW-Authenticate",
     }
 
@@ -476,9 +476,12 @@ def _www_authenticate_401(request, msg_id=None) -> Response:
     """401 with RFC 9728 WWW-Authenticate so MCP clients start GitHub OAuth."""
     import auth_resolver
     error_text = (
-        "Authentication required. This MCP server authorizes via GitHub OAuth; "
-        "your client should open a browser to sign in with GitHub. If it does "
-        "not, remove and re-add the connector to trigger the OAuth flow."
+        "Authentication required. Provide your own GitHub token (BYO): add an "
+        "'X-GitHub-Token: <your GitHub token>' header (or 'Authorization: Bearer "
+        "<your GitHub token>') to the MCP server config. A classic PAT with no "
+        "scopes reads public repos at your own 5,000 req/h; add 'repo' scope for "
+        "private repos. (If the GitHub OAuth App is configured, a browser sign-in "
+        "flow is also available.)"
     )
     headers = {
         "Content-Type": "application/json",
