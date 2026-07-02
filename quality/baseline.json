@@ -315,6 +315,26 @@
       "ecosystem": "pypi",
       "package": "tiktoken",
       "baseline": "0.13.0"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "assemblyscript",
+      "baseline": "0.28.19"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "wabt",
+      "baseline": "1.0.39"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "binaryen",
+      "baseline": "130.0.0"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "wasmtime",
+      "baseline": "46.0.1"
     }
   ]
 }
