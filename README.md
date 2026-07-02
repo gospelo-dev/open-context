@@ -185,6 +185,7 @@ Current specs live in [`docs/current/`](https://github.com/gospelo-dev/open-cont
 - [Authentication (BYO PAT / OAuth)](https://github.com/gospelo-dev/open-context/blob/main/docs/current/architecture/auth.md)
 - [Deployment & self-hosting](https://github.com/gospelo-dev/open-context/blob/main/docs/current/architecture/deployment.md)
 - [Tool reference](https://github.com/gospelo-dev/open-context/blob/main/docs/current/tools/reference.md)
+- [Client integration & tool-calling guide](https://github.com/gospelo-dev/open-context/blob/main/docs/current/clients/tool-calling.md)
 
 ---
 

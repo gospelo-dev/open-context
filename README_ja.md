@@ -184,6 +184,7 @@ bearer_token_env_var = "OPEN_CONTEXT_GH_TOKEN"   # export に GitHub トーク�
 - [認証(BYO PAT / OAuth)](https://github.com/gospelo-dev/open-context/blob/main/docs/current/architecture/auth.md)
 - [デプロイ・セルフホスト](https://github.com/gospelo-dev/open-context/blob/main/docs/current/architecture/deployment.md)
 - [ツールリファレンス](https://github.com/gospelo-dev/open-context/blob/main/docs/current/tools/reference.md)
+- [クライアント連携・tool-calling ガイド](https://github.com/gospelo-dev/open-context/blob/main/docs/current/clients/tool-calling.md)
 
 ---
 

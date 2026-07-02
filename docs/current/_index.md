@@ -11,6 +11,9 @@
 ## 2. ツール
 - [x] [MCP ツールリファレンス(6 tools)](tools/reference.md)
 
+## 2.5. クライアント連携
+- [x] [クライアント連携・tool-calling ガイド](clients/tool-calling.md)
+
 ## 3. ソース参照(single source of truth)
 - [worker/src/mcp_handler.py](../../worker/src/mcp_handler.py) — MCP 転送層 + 6 ツール実装 + 安全上限
 - [worker/src/version_resolver.py](../../worker/src/version_resolver.py) — registry→tag→subdir 解決
