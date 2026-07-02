@@ -1,0 +1,45 @@
+name: readme-sync
+
+# Keep the monitored-packages breakdown in README.md / README_ja.md in sync with
+# quality/baseline.json. Runs on push that changes the baseline (or the generator)
+# and auto-commits the regenerated README block if it drifted.
+#
+# No loop risk: this job only ever commits README*.md, which are NOT in `paths`,
+# so its own commit does not re-trigger the workflow.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - quality/baseline.json
+      - quality/gen_readme.py
+      - .github/workflows/readme-sync.yml
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate README breakdown
+        run: python quality/gen_readme.py
+
+      - name: Commit if changed
+        run: |
+          if [ -n "$(git status --porcelain README.md README_ja.md)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add README.md README_ja.md
+            git commit -m "docs: sync monitored-packages breakdown from baseline"
+            git push
+          else
+            echo "README already in sync"
+          fi
