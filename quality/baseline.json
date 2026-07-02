@@ -35,6 +35,21 @@
       "ecosystem": "pypi",
       "package": "openai",
       "baseline": "2.44.0"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@anthropic-ai/sdk",
+      "baseline": "0.109.1"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "openai",
+      "baseline": "6.45.0"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "aws-cdk-lib",
+      "baseline": "2.260.0"
     }
   ]
 }
