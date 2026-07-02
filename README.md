@@ -1,7 +1,7 @@
 # gospelo-open-context
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-1E90FF.svg?style=flat)](https://github.com/gospelo-dev/open-context/blob/main/LICENSE) [![Python](https://img.shields.io/badge/Python-3.12+-1E90FF.svg?style=flat&logo=python&logoColor=white)](https://www.python.org/) [![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers-F38020.svg?style=flat&logo=cloudflare&logoColor=white)](https://workers.cloudflare.com/)  [![Auth](https://img.shields.io/badge/Auth-GitHub_token_(BYO)-2088FF.svg?style=flat&logo=github&logoColor=white)](https://github.com/gospelo-dev/open-context/blob/main/docs/current/architecture/auth.md)
-[![MCP](https://img.shields.io/badge/MCP-Claude_Code_%7C_Codex_%7C_Cursor-7B3FF2.svg?style=flat)](https://open-context.gospelo.dev/mcp)
+[![MCP](https://img.shields.io/badge/MCP-Claude_Code_%7C_Codex_%7C_Copilot_%7C_Cursor_%7C_OpenCode_%7C_LM_Studio-7B3FF2.svg?style=flat)](https://open-context.gospelo.dev/mcp)
 
 <p align="center"><img src="https://raw.githubusercontent.com/gospelo-dev/open-context/main/assets/hero.jpg" alt="Open Context — secure, version-precise docs & code for coding agents" width="820"></p>
 
@@ -44,6 +44,54 @@ claude mcp add --transport http --scope user open-context \
 url = "https://open-context.gospelo.dev/mcp"
 bearer_token_env_var = "OPEN_CONTEXT_GH_TOKEN"   # export your GitHub token
 ```
+
+**GitHub Copilot** (VS Code — `.vscode/mcp.json`; the token is prompted once and stored securely, never written to the file):
+```json
+{
+  "inputs": [
+    { "type": "promptString", "id": "open-context-token", "description": "GitHub PAT for open-context", "password": true }
+  ],
+  "servers": {
+    "open-context": {
+      "type": "http",
+      "url": "https://open-context.gospelo.dev/mcp",
+      "headers": { "X-GitHub-Token": "${input:open-context-token}" }
+    }
+  }
+}
+```
+Then, in VS Code: **Command Palette → `MCP: List Servers` → `open-context` → Start**, enter your GitHub PAT when prompted (no scope needed for public packages; add `repo` only for private repos), and the `open-context` tools become available in Copilot Chat (agent mode) — reference them with `#open-context`.
+
+For the **Copilot CLI** use `~/.copilot/mcp-config.json` (same object under `"mcpServers"`), or `copilot mcp add --transport http --header "X-GitHub-Token: ghp_your_token" open-context https://open-context.gospelo.dev/mcp`. (MCP requires no policy change on Copilot Free/Pro; on Business/Enterprise your org must allow MCP.)
+
+**OpenCode** (`~/.config/opencode/opencode.json` for user scope — keep tokens out of the project-level `opencode.json`):
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "open-context": {
+      "type": "remote",
+      "url": "https://open-context.gospelo.dev/mcp",
+      "enabled": true,
+      "headers": { "X-GitHub-Token": "{env:OPEN_CONTEXT_GH_TOKEN}" }
+    }
+  }
+}
+```
+`{env:...}` expands from your environment, so no token is written to the file (or use the raw `ghp_your_token`).
+
+**LM Studio** (`~/.lmstudio/mcp.json` — remote MCP host; the token is stored raw, so keep this file private):
+```json
+{
+  "mcpServers": {
+    "open-context": {
+      "url": "https://open-context.gospelo.dev/mcp",
+      "headers": { "X-GitHub-Token": "ghp_your_token" }
+    }
+  }
+}
+```
+Then in the LM Studio app: load a **tool-calling capable model** and toggle `open-context` on via the integrations (🔌) control in the chat. Verified working with `qwen2.5-coder-7b-instruct` (MLX) — LM Studio parses the model's tool output into structured tool calls, so `get_readme`/`list_contexts` fire correctly. (Note: the Ollama runtime does *not* structure tool calls for `qwen2.5-coder`; use LM Studio, or `qwen3` on Ollama.)
 
 Any MCP client that supports remote (Streamable HTTP) servers with custom headers works. Never commit a config file that contains your token.
 

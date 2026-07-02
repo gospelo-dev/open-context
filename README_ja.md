@@ -1,6 +1,6 @@
 # gospelo-open-context
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-1E90FF.svg?style=flat)](https://github.com/gospelo-dev/open-context/blob/main/LICENSE) [![Python](https://img.shields.io/badge/Python-3.12+-1E90FF.svg?style=flat&logo=python&logoColor=white)](https://www.python.org/) [![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers-F38020.svg?style=flat&logo=cloudflare&logoColor=white)](https://workers.cloudflare.com/) [![Auth](https://img.shields.io/badge/Auth-GitHub_token_(BYO)-2088FF.svg?style=flat&logo=github&logoColor=white)](https://github.com/gospelo-dev/open-context/blob/main/docs/current/architecture/auth.md) [![MCP](https://img.shields.io/badge/MCP-Claude_Code_%7C_Codex_%7C_Cursor-7B3FF2.svg?style=flat)](https://open-context.gospelo.dev/mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-1E90FF.svg?style=flat)](https://github.com/gospelo-dev/open-context/blob/main/LICENSE) [![Python](https://img.shields.io/badge/Python-3.12+-1E90FF.svg?style=flat&logo=python&logoColor=white)](https://www.python.org/) [![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers-F38020.svg?style=flat&logo=cloudflare&logoColor=white)](https://workers.cloudflare.com/) [![Auth](https://img.shields.io/badge/Auth-GitHub_token_(BYO)-2088FF.svg?style=flat&logo=github&logoColor=white)](https://github.com/gospelo-dev/open-context/blob/main/docs/current/architecture/auth.md) [![MCP](https://img.shields.io/badge/MCP-Claude_Code_%7C_Codex_%7C_Copilot_%7C_Cursor_%7C_OpenCode_%7C_LM_Studio-7B3FF2.svg?style=flat)](https://open-context.gospelo.dev/mcp)
 
 <p align="center"><img src="https://raw.githubusercontent.com/gospelo-dev/open-context/main/assets/hero.jpg" alt="Open Context — セキュアでバージョン厳密な docs とコードをコーディングエージェントへ" width="820"></p>
 
@@ -43,6 +43,54 @@ claude mcp add --transport http --scope user open-context \
 url = "https://open-context.gospelo.dev/mcp"
 bearer_token_env_var = "OPEN_CONTEXT_GH_TOKEN"   # export に GitHub トークン
 ```
+
+**GitHub Copilot**(VS Code — `.vscode/mcp.json`。トークンは初回に一度だけ入力を求められ安全に保存される。ファイルには書かれない):
+```json
+{
+  "inputs": [
+    { "type": "promptString", "id": "open-context-token", "description": "open-context 用 GitHub PAT", "password": true }
+  ],
+  "servers": {
+    "open-context": {
+      "type": "http",
+      "url": "https://open-context.gospelo.dev/mcp",
+      "headers": { "X-GitHub-Token": "${input:open-context-token}" }
+    }
+  }
+}
+```
+設定後、VS Code で **コマンドパレット → `MCP: List Servers` → `open-context` → Start** を実行し、プロンプトに GitHub PAT を入力(public パッケージならスコープ不要。private リポジトリを見る場合のみ `repo` を追加)。以後 Copilot Chat(エージェントモード)で `open-context` のツールが使え、`#open-context` で参照できる。
+
+**Copilot CLI** は `~/.copilot/mcp-config.json`(同じ内容を `"mcpServers"` 配下に)、または `copilot mcp add --transport http --header "X-GitHub-Token: ghp_あなたのトークン" open-context https://open-context.gospelo.dev/mcp`。(MCP は Copilot Free/Pro ではポリシー変更不要。Business/Enterprise では組織側で MCP 許可が必要。)
+
+**OpenCode**(user スコープは `~/.config/opencode/opencode.json`。プロジェクト直下の `opencode.json` にはトークンを書かない):
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "open-context": {
+      "type": "remote",
+      "url": "https://open-context.gospelo.dev/mcp",
+      "enabled": true,
+      "headers": { "X-GitHub-Token": "{env:OPEN_CONTEXT_GH_TOKEN}" }
+    }
+  }
+}
+```
+`{env:...}` は環境変数から展開されるためファイルにトークンは書かれない(生の `ghp_あなたのトークン` を直書きも可)。
+
+**LM Studio**(`~/.lmstudio/mcp.json` — リモート MCP ホスト。トークンは生で保存されるためファイルは非公開に):
+```json
+{
+  "mcpServers": {
+    "open-context": {
+      "url": "https://open-context.gospelo.dev/mcp",
+      "headers": { "X-GitHub-Token": "ghp_あなたのトークン" }
+    }
+  }
+}
+```
+その後 LM Studio アプリで、**tool-calling 対応モデル**をロードし、チャットのインテグレーション(🔌)で `open-context` を ON にする。`qwen2.5-coder-7b-instruct`(MLX)で動作確認済み — LM Studio がモデルのツール出力を構造化 tool call に変換するため `get_readme`/`list_contexts` が正しく発火する。(注: Ollama ランタイムは `qwen2.5-coder` の tool call を構造化**しない**。LM Studio を使うか、Ollama なら `qwen3` を使う。)
 
 リモート(Streamable HTTP)+ カスタムヘッダー対応の MCP クライアントで利用可能。**トークンを含む設定ファイルはコミットしないこと**。
 
