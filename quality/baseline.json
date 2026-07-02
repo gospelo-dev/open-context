@@ -100,6 +100,31 @@
       "ecosystem": "npm",
       "package": "react-router",
       "baseline": "8.1.0"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "prettier",
+      "baseline": "3.9.4"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "eslint",
+      "baseline": "10.6.0"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "pnpm",
+      "baseline": "11.9.0"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "bun",
+      "baseline": "1.3.14"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "npm",
+      "baseline": "11.18.0"
     }
   ]
 }
