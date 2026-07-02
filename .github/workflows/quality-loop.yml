@@ -1,0 +1,56 @@
+name: quality-loop
+
+# Daily, deterministic (no LLM / 0 tokens): detect major/minor updates of the
+# monitored packages, run the acceptance checker against the live server, open
+# a Japanese GitHub issue on FAIL, and advance the baseline on PASS/WARN.
+
+on:
+  schedule:
+    - cron: "0 0 * * *"   # 00:00 UTC (09:00 JST) daily
+  workflow_dispatch: {}    # manual run
+
+permissions:
+  contents: write   # commit baseline.json
+  issues: write     # open/update failure issues
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run acceptance checks
+        id: run
+        env:
+          OPEN_CONTEXT_TEST_TOKEN: ${{ secrets.OPEN_CONTEXT_TEST_TOKEN }}
+        run: python quality/run.py
+
+      - name: Commit advanced baseline
+        if: steps.run.outputs.baseline_changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add quality/baseline.json
+          git commit -m "chore(quality-loop): advance baseline after passing checks"
+          git push
+
+      - name: Open/refresh failure issues (Japanese)
+        if: steps.run.outputs.has_failures == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          shopt -s nullglob
+          for f in quality/_reports/*.md; do
+            pkg=$(basename "$f" .md)
+            title="[quality-loop] ${pkg} が FAIL"
+            existing=$(gh issue list --state open --search "${title} in:title" --json number --jq '.[0].number // empty')
+            if [ -n "$existing" ]; then
+              gh issue comment "$existing" --body-file "$f"
+            else
+              gh issue create --title "$title" --body-file "$f"
+            fi
+          done

@@ -29,3 +29,6 @@ development/
 
 # OS / editor
 .DS_Store
+
+# quality-loop transient CI reports
+quality/_reports/
