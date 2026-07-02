@@ -16,7 +16,9 @@
 		"enabled": true
 	},
 	"vars": {
-		"ENVIRONMENT": "development",
+		// production by default (deploy). Local `pywrangler dev` overrides this
+		// to "development" via .dev.vars to enable the X-Debug-Github-Token bypass.
+		"ENVIRONMENT": "production",
 		"APP_VERSION": "0.1.0",
 		"DEPLOY_COMMIT": "local"
 	},
@@ -29,7 +31,7 @@
 	"kv_namespaces": [
 		{
 			"binding": "AUTH_KV",
-			"id": "REPLACE_WITH_KV_NAMESPACE_ID"
+			"id": "24aef090c8854902afe3d4b0bd79b698"
 		}
 	],
 	"routes": [
