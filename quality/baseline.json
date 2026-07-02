@@ -335,6 +335,71 @@
       "ecosystem": "pypi",
       "package": "wasmtime",
       "baseline": "46.0.1"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "zustand",
+      "baseline": "5.0.14"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@reduxjs/toolkit",
+      "baseline": "2.12.0"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "jotai",
+      "baseline": "2.20.1"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@tanstack/react-query",
+      "baseline": "5.101.2"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "swr",
+      "baseline": "2.4.2"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "axios",
+      "baseline": "1.18.1"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "react-hook-form",
+      "baseline": "7.80.0"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "vitest",
+      "baseline": "4.1.9"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@playwright/test",
+      "baseline": "1.61.1"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@testing-library/react",
+      "baseline": "16.3.2"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@mui/material",
+      "baseline": "9.1.2"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@chakra-ui/react",
+      "baseline": "3.36.0"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "motion",
+      "baseline": "12.42.2"
     }
   ]
 }
