@@ -185,6 +185,11 @@
       "ecosystem": "pypi",
       "package": "alembic",
       "baseline": "1.18.5"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "react-dom",
+      "baseline": "19.2.7"
     }
   ]
 }
