@@ -1,0 +1,12 @@
+# Cloudflare account id (kept out of wrangler.jsonc; wrangler reads this env var)
+CLOUDFLARE_ACCOUNT_ID=your-cloudflare-account-id
+
+# GitHub OAuth App credentials (this server acts as a GitHub OAuth App)
+GITHUB_OAUTH_CLIENT_ID=Iv1.xxxxxxxxxxxx
+GITHUB_OAUTH_CLIENT_SECRET=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+# AES-GCM key (base64 of 32 random bytes) used to encrypt stored GitHub tokens
+SESSION_ENCRYPTION_KEY=base64-of-32-random-bytes
+
+# Dev-only shortcut: when ENVIRONMENT=development the MCP handler accepts
+# X-Debug-Github-Token so tools can be exercised without the full OAuth flow.

@@ -1,0 +1,41 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	// account_id is intentionally omitted — set the CLOUDFLARE_ACCOUNT_ID
+	// environment variable (e.g. in .dev.vars or the deploy shell) instead of
+	// committing it.
+	"name": "gospelo-open-context",
+	"main": "src/entry.py",
+	"compatibility_date": "2025-11-02",
+	"compatibility_flags": [
+		"python_workers"
+	],
+	"limits": {
+		"cpu_ms": 300000
+	},
+	"observability": {
+		"enabled": true
+	},
+	"vars": {
+		"ENVIRONMENT": "development",
+		"APP_VERSION": "0.1.0",
+		"DEPLOY_COMMIT": "local"
+	},
+	"r2_buckets": [
+		{
+			"binding": "CACHE",
+			"bucket_name": "open-context-cache"
+		}
+	],
+	"kv_namespaces": [
+		{
+			"binding": "AUTH_KV",
+			"id": "REPLACE_WITH_KV_NAMESPACE_ID"
+		}
+	],
+	"routes": [
+		{
+			"pattern": "open-context.gospelo.dev",
+			"custom_domain": true
+		}
+	]
+}

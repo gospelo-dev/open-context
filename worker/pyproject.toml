@@ -1,0 +1,18 @@
+[project]
+name = "gospelo-open-context"
+version = "0.1.0"
+description = "Version-specific package docs + source for coding agents (rtfmbro/Context7 alternative) on Cloudflare Python Workers"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "workers-py",
+    "workers-runtime-sdk",
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
