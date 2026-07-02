@@ -796,26 +796,98 @@ async def _handle_tool_call(msg_id, params: dict, env, request, auth_ctx: dict) 
     return await handler(msg_id, arguments, env, request, r2, token, pin)
 
 
+# ---------------------------------------------------------------------------
+# Direct file fetch (no full git tree) — used by get_readme / read_files /
+# get_outline so they stay O(files requested) and work even on very large
+# repos (e.g. microsoft/TypeScript) that would blow the Worker resource limit
+# if we built the whole recursive manifest.
+# ---------------------------------------------------------------------------
+
+
+async def _read_bytes_direct(r2, token, owner, repo, commit_sha, full_path):
+    """Fetch one file by commit + path via raw (rate-free), cached in R2 by
+    commit+path (commit is immutable). No git tree needed."""
+    import cache_store
+    import github_client
+
+    key = cache_store.resolved_key(owner, repo, commit_sha, full_path)
+    data = await cache_store.get_file(r2, key)
+    if data is not None:
+        return data
+    data = await github_client.get_raw_file(token, owner, repo, commit_sha, full_path)
+    if data is None:
+        return None
+    await cache_store.put_file(r2, key, data, _content_type(full_path))
+    return data
+
+
+def _direct_candidates(pin: dict, path: str) -> list:
+    """Candidate (owner, repo, commit_sha, full_path) locations for a path:
+    the code repo (subdir-relative, or repo-root for '/'-prefixed), then the
+    docs-override repo if present."""
+    subdir = pin.get("subdir") or ""
+    cands = []
+    if path.startswith("/"):
+        cands.append((pin["owner"], pin["repo"], pin["commit_sha"], path[1:]))
+    else:
+        full = f"{subdir}/{path}" if subdir else path
+        cands.append((pin["owner"], pin["repo"], pin["commit_sha"], full))
+    dp = pin.get("docs_pin")
+    if dp:
+        dsub = dp.get("subdir") or ""
+        rel = path[1:] if path.startswith("/") else path
+        dfull = f"{dsub}/{rel}" if dsub else rel
+        cands.append((dp["owner"], dp["repo"], dp["commit_sha"], dfull))
+    return cands
+
+
+async def _read_file_direct(r2, token, pin, path: str):
+    """Return (text, note). Tries the code repo then the docs-override repo."""
+    found_any = False
+    for owner, repo, commit_sha, full_path in _direct_candidates(pin, path):
+        data = await _read_bytes_direct(r2, token, owner, repo, commit_sha, full_path)
+        if data is None:
+            continue
+        found_any = True
+        if b"\x00" in data[:8000]:
+            return None, f"binary file skipped: {path}"
+        try:
+            return data.decode("utf-8"), None
+        except Exception:
+            return None, f"non-UTF-8 file skipped: {path}"
+    return None, (f"not found: {path}" if not found_any else f"unavailable: {path}")
+
+
+_README_NAMES = ["README.md", "readme.md", "Readme.md", "README.markdown", "README.rst", "README.txt", "README"]
+
+
+async def _fetch_readme_direct(r2, token, pin):
+    """Find and read the README without building the tree: probe the package
+    subdir first, then the repo root, for common README filenames."""
+    subdir = pin.get("subdir") or ""
+    prefixes = ([subdir + "/"] if subdir else []) + [""]
+    for prefix in prefixes:
+        for name in _README_NAMES:
+            data = await _read_bytes_direct(
+                r2, token, pin["owner"], pin["repo"], pin["commit_sha"], f"{prefix}{name}"
+            )
+            if data is not None:
+                try:
+                    return f"{prefix}{name}", data.decode("utf-8")
+                except Exception:
+                    continue
+    return None, None
+
+
 async def _tool_get_readme(msg_id, args, env, request, r2, token, pin) -> Response:
-    manifest = await _get_or_build_manifest(r2, token, pin)
-    readme = _pick_readme(manifest["files"])
-    if not readme:
-        # Fall back to a repo-root README (package subdir had none).
-        root_readme = _pick_readme(manifest.get("root_docs", {}))
-        if root_readme:
-            readme = "/" + root_readme
-    if not readme:
+    name, text = await _fetch_readme_direct(r2, token, pin)
+    if text is None:
         return _make_response(
             _jsonrpc_response(msg_id, _text_result(
                 f"{_pin_header(pin)}\n\nNo README found in this package.", True)),
             request,
         )
-    text, note = await _read_file(r2, token, manifest, readme)
-    if text is None:
-        return _make_response(
-            _jsonrpc_response(msg_id, _text_result(f"{_pin_header(pin)}\n\nError: {note}", True)), request
-        )
-    body = f"{_pin_header(pin)}\n\n--- {readme} ---\n\n{_truncate(text)}"
+    body = f"{_pin_header(pin)}\n\n--- {name} ---\n\n{_truncate(text)}"
     return _make_response(_jsonrpc_response(msg_id, _text_result(body)), request)
 
 
@@ -880,7 +952,6 @@ async def _tool_read_files(msg_id, args, env, request, r2, token, pin) -> Respon
                 f"Error: too many files ({len(requests)}); max {MAX_FILES_PER_READ} per call.", True)),
             request,
         )
-    manifests = await _manifests_for(r2, token, pin)
     blocks = [f"{_pin_header(pin)}"]
     total = 0
     for req in requests:
@@ -888,7 +959,7 @@ async def _tool_read_files(msg_id, args, env, request, r2, token, pin) -> Respon
         if not path:
             blocks.append("--- (missing path) ---\nError: 'path' required")
             continue
-        text, note = await _read_across(r2, token, manifests, path)
+        text, note = await _read_file_direct(r2, token, pin, path)
         if text is None:
             blocks.append(f"--- {path} ---\nError: {note}")
             continue
@@ -981,8 +1052,7 @@ async def _tool_get_outline(msg_id, args, env, request, r2, token, pin) -> Respo
         return _make_response(
             _jsonrpc_response(msg_id, _text_result("Error: 'path' is required.", True)), request
         )
-    manifests = await _manifests_for(r2, token, pin)
-    text, note = await _read_across(r2, token, manifests, path)
+    text, note = await _read_file_direct(r2, token, pin, path)
     if text is None:
         return _make_response(
             _jsonrpc_response(msg_id, _text_result(f"{_pin_header(pin)}\n\nError: {note}", True)), request

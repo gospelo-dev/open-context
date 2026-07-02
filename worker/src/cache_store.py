@@ -88,6 +88,34 @@ async def put_resolve_cache(r2, ecosystem, package, version, pin: dict) -> None:
     await _put_json(r2, resolve_key(ecosystem, package, version), pin)
 
 
+def resolved_key(owner: str, repo: str, commit_sha: str, full_path: str) -> str:
+    """Cache key for a file fetched directly by commit + path (commit is
+    immutable, so this is a safe permanent cache without needing the git tree)."""
+    return f"resolved/{owner}/{repo}/{commit_sha}/{full_path}"
+
+
+async def get_file(r2, key: str) -> bytes | None:
+    if r2 is None:
+        return None
+    obj = await r2.get(key)
+    if obj is None:
+        return None
+    buf = await obj.arrayBuffer()
+    if isinstance(buf, (bytes, bytearray)):
+        return bytes(buf)
+    return bytes(Uint8Array.new(buf).to_py())
+
+
+async def put_file(r2, key: str, data: bytes, content_type: str = "text/plain") -> None:
+    if r2 is None:
+        return
+    await r2.put(
+        key,
+        to_js(data),
+        to_js({"httpMetadata": {"contentType": content_type}}),
+    )
+
+
 async def get_blob(r2, blob_sha: str) -> bytes | None:
     if r2 is None:
         return None
