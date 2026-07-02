@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+
+# Cloudflare / Wrangler
+.wrangler/
+# pywrangler-synced vendored SDK (regenerated on dev/deploy)
+worker/python_modules/
+
+# Claude Code local config / skills / instructions
+.claude/
+CLAUDE.md
+
+# Secrets — never commit
+.dev.vars
+*.dev.vars
+
+# Local-only development docs / changelog / scripts
+development/
+
+# OS / editor
+.DS_Store
