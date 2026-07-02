@@ -1,9 +1,25 @@
 {
   "endpoint": "https://open-context.gospelo.dev",
   "packages": [
-    { "ecosystem": "npm",  "package": "typescript", "baseline": "5.7.2" },
-    { "ecosystem": "npm",  "package": "react",      "baseline": "19.0.0" },
-    { "ecosystem": "pypi", "package": "requests",   "baseline": "2.32.3" },
-    { "ecosystem": "pypi", "package": "fastapi",    "baseline": "0.115.6" }
+    {
+      "ecosystem": "npm",
+      "package": "typescript",
+      "baseline": "6.0.3"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "react",
+      "baseline": "19.2.7"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "requests",
+      "baseline": "2.34.2"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "fastapi",
+      "baseline": "0.139.0"
+    }
   ]
 }
