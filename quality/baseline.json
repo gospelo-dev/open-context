@@ -190,6 +190,11 @@
       "ecosystem": "npm",
       "package": "react-dom",
       "baseline": "19.2.7"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "ruff",
+      "baseline": "0.15.20"
     }
   ]
 }
