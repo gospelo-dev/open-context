@@ -63,8 +63,18 @@ def _digits(s):
 def _parse_pin(text):
     """First line: '{pkg}@{ver} — {owner}/{repo}[/sub] @ {tag} (sha)'. Return tag."""
     first = (text or "").splitlines()[0] if text else ""
-    m = re.search(r"@\s+([^\s(]+)\s*\(", first)
+    # take the LAST '@ ... (' so scoped names in the pkg part aren't captured
+    m = None
+    for m in re.finditer(r"@\s+([^\s(]+)\s*\(", first):
+        pass
     return (m.group(1) if m else ""), first
+
+
+def _tag_version(tag):
+    """Version digits from a git tag: 'v1.2.3' / '1.2.3' / '@scope/pkg@1.2.3'."""
+    tail = tag.rsplit("@", 1)[-1]           # drop scoped-name prefix (e.g. @builder.io/qwik@)
+    tail = tail[1:] if tail[:1] == "v" else tail
+    return _digits(tail)
 
 
 def check(endpoint, token, pkg, version, eco):
@@ -83,7 +93,7 @@ def check(endpoint, token, pkg, version, eco):
         if rd["latency"] > TIMEOUT:
             rec("H", "WARN", f"get_readme 遅延 {rd['latency']:.1f}s")
         tag, header = _parse_pin(rd["text"])
-        tag_ok = _digits(tag) == version
+        tag_ok = _tag_version(tag) == version
         if rd["isError"]:
             rec("C1", "FAIL", f"解決エラー: {header[:160]}")
             rec("C2", "FAIL", "README がエラー応答")
