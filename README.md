@@ -140,6 +140,7 @@ A daily GitHub Actions job (deterministic, **no LLM, zero tokens**) re-checks a 
 | `ai-sdk` | 4 |
 | `backend-framework` | 4 |
 | `testing` | 4 |
+| `ui-components` | 4 |
 | `webassembly` | 4 |
 | `cli-tui` | 3 |
 | `data-fetching` | 3 |
@@ -148,13 +149,12 @@ A daily GitHub Actions job (deterministic, **no LLM, zero tokens**) re-checks a 
 | `mcp` | 3 |
 | `state-management` | 3 |
 | `agent` | 2 |
-| `ui-components` | 2 |
 | `validation` | 2 |
 | `animation` | 1 |
 | `forms` | 1 |
 | `infra-iac` | 1 |
 | `styling` | 1 |
-| **Total** | **80** |
+| **Total** | **82** |
 <!-- END:monitored -->
 
 

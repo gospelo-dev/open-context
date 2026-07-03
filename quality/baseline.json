@@ -110,6 +110,18 @@
       "baseline": "9.1.2"
     },
     {
+      "category": "ui-components",
+      "ecosystem": "npm",
+      "package": "shadcn",
+      "baseline": "4.13.0"
+    },
+    {
+      "category": "ui-components",
+      "ecosystem": "npm",
+      "package": "@base-ui-components/react",
+      "baseline": "1.0.0-rc.0"
+    },
+    {
       "category": "animation",
       "ecosystem": "npm",
       "package": "motion",

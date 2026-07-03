@@ -35,6 +35,20 @@ OVERRIDES = {
             "ref": "v2",
         },
     },
+    # The `shadcn` npm package is the CLI (repository.directory = packages/shadcn,
+    # source only). Real docs live in the site app under apps/v4.
+    "npm:shadcn": {
+        "docs": {"repo": "shadcn-ui/ui", "subdir": "apps/v4/content/docs", "ref": "main"},
+    },
+    # @base-ui-components/react resolves to packages/react (source). Docs are the
+    # Next.js content route group under docs/src/app/(docs)/react.
+    "npm:@base-ui-components/react": {
+        "docs": {
+            "repo": "mui/base-ui",
+            "subdir": "docs/src/app/(docs)/react",
+            "ref": "master",
+        },
+    },
 }
 
 
