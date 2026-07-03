@@ -299,7 +299,7 @@
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "@anthropic-ai/sdk",
-      "baseline": "0.109.1"
+      "baseline": "0.110.0"
     },
     {
       "category": "ai-sdk",
@@ -311,7 +311,7 @@
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "anthropic",
-      "baseline": "0.115.1"
+      "baseline": "0.116.0"
     },
     {
       "category": "ai-sdk",
@@ -347,7 +347,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.3.0"
+      "baseline": "2.4.0"
     },
     {
       "category": "rag-vectordb",
@@ -479,7 +479,7 @@
       "category": "infra-iac",
       "ecosystem": "npm",
       "package": "aws-cdk-lib",
-      "baseline": "2.260.0"
+      "baseline": "2.261.0"
     }
   ]
 }
