@@ -107,7 +107,7 @@
       "category": "ui-components",
       "ecosystem": "npm",
       "package": "@mui/material",
-      "baseline": "9.1.2"
+      "baseline": "9.2.0"
     },
     {
       "category": "ui-components",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.4.0"
+      "baseline": "2.5.0"
     },
     {
       "category": "rag-vectordb",
@@ -425,7 +425,7 @@
       "category": "rag-ml",
       "ecosystem": "pypi",
       "package": "transformers",
-      "baseline": "5.12.1"
+      "baseline": "5.13.0"
     },
     {
       "category": "orm-db",
