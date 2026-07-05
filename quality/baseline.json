@@ -221,7 +221,7 @@
       "category": "package-manager",
       "ecosystem": "npm",
       "package": "pnpm",
-      "baseline": "11.9.0"
+      "baseline": "11.10.0"
     },
     {
       "category": "package-manager",
@@ -257,7 +257,7 @@
       "category": "backend-framework",
       "ecosystem": "pypi",
       "package": "uvicorn",
-      "baseline": "0.49.0"
+      "baseline": "0.50.0"
     },
     {
       "category": "http-async",
