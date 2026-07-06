@@ -95,7 +95,7 @@
       "category": "forms",
       "ecosystem": "npm",
       "package": "react-hook-form",
-      "baseline": "7.80.0"
+      "baseline": "7.81.0"
     },
     {
       "category": "ui-components",
