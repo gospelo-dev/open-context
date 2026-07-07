@@ -371,7 +371,7 @@
       "category": "rag-vectordb",
       "ecosystem": "pypi",
       "package": "pgvector",
-      "baseline": "0.4.2"
+      "baseline": "0.5.0"
     },
     {
       "category": "rag-vectordb",
