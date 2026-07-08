@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.5.0"
+      "baseline": "2.6.0"
     },
     {
       "category": "rag-vectordb",
