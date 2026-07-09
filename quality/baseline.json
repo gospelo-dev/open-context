@@ -41,7 +41,7 @@
       "category": "frontend-framework",
       "ecosystem": "npm",
       "package": "react-router",
-      "baseline": "8.1.0"
+      "baseline": "8.2.0"
     },
     {
       "category": "frontend-framework",
@@ -155,7 +155,7 @@
       "category": "build-tool",
       "ecosystem": "npm",
       "package": "typescript",
-      "baseline": "6.0.3"
+      "baseline": "7.0.2"
     },
     {
       "category": "build-tool",
@@ -215,7 +215,7 @@
       "category": "package-manager",
       "ecosystem": "npm",
       "package": "npm",
-      "baseline": "11.18.0"
+      "baseline": "12.0.0"
     },
     {
       "category": "package-manager",
@@ -257,7 +257,7 @@
       "category": "backend-framework",
       "ecosystem": "pypi",
       "package": "uvicorn",
-      "baseline": "0.50.0"
+      "baseline": "0.51.0"
     },
     {
       "category": "http-async",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.6.0"
+      "baseline": "2.7.0"
     },
     {
       "category": "rag-vectordb",
@@ -401,7 +401,7 @@
       "category": "rag-ml",
       "ecosystem": "pypi",
       "package": "haystack-ai",
-      "baseline": "2.30.2"
+      "baseline": "2.31.0"
     },
     {
       "category": "rag-ml",
