@@ -221,7 +221,7 @@
       "category": "package-manager",
       "ecosystem": "npm",
       "package": "pnpm",
-      "baseline": "11.10.0"
+      "baseline": "11.11.0"
     },
     {
       "category": "package-manager",
@@ -317,7 +317,7 @@
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "openai",
-      "baseline": "6.45.0"
+      "baseline": "6.46.0"
     },
     {
       "category": "ai-sdk",
@@ -329,7 +329,7 @@
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "openai",
-      "baseline": "2.44.0"
+      "baseline": "2.45.0"
     },
     {
       "category": "mcp",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.7.0"
+      "baseline": "2.8.0"
     },
     {
       "category": "rag-vectordb",
