@@ -167,7 +167,7 @@
       "category": "lint-format",
       "ecosystem": "npm",
       "package": "eslint",
-      "baseline": "10.6.0"
+      "baseline": "10.7.0"
     },
     {
       "category": "lint-format",
@@ -311,7 +311,7 @@
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "@anthropic-ai/sdk",
-      "baseline": "0.110.0"
+      "baseline": "0.111.0"
     },
     {
       "category": "ai-sdk",
