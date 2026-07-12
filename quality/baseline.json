@@ -221,7 +221,7 @@
       "category": "package-manager",
       "ecosystem": "npm",
       "package": "pnpm",
-      "baseline": "11.11.0"
+      "baseline": "11.12.0"
     },
     {
       "category": "package-manager",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.8.0"
+      "baseline": "2.9.0"
     },
     {
       "category": "rag-vectordb",
