@@ -221,7 +221,7 @@
       "category": "package-manager",
       "ecosystem": "npm",
       "package": "pnpm",
-      "baseline": "11.12.0"
+      "baseline": "11.13.0"
     },
     {
       "category": "package-manager",
@@ -443,7 +443,7 @@
       "category": "orm-db",
       "ecosystem": "npm",
       "package": "typeorm",
-      "baseline": "1.0.0"
+      "baseline": "1.1.0"
     },
     {
       "category": "orm-db",
