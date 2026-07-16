@@ -293,7 +293,7 @@
       "category": "cli-tui",
       "ecosystem": "pypi",
       "package": "typer",
-      "baseline": "0.26.8"
+      "baseline": "0.27.0"
     },
     {
       "category": "validation",
@@ -425,7 +425,7 @@
       "category": "rag-ml",
       "ecosystem": "pypi",
       "package": "transformers",
-      "baseline": "5.13.0"
+      "baseline": "5.14.0"
     },
     {
       "category": "orm-db",
