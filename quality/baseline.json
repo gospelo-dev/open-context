@@ -11,7 +11,7 @@
       "category": "frontend-framework",
       "ecosystem": "npm",
       "package": "astro",
-      "baseline": "7.0.5"
+      "baseline": "7.1.0"
     },
     {
       "category": "frontend-framework",
@@ -311,7 +311,7 @@
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "@anthropic-ai/sdk",
-      "baseline": "0.111.0"
+      "baseline": "0.112.1"
     },
     {
       "category": "ai-sdk",
@@ -323,7 +323,7 @@
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "anthropic",
-      "baseline": "0.116.0"
+      "baseline": "0.117.0"
     },
     {
       "category": "ai-sdk",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.10.0"
+      "baseline": "2.11.0"
     },
     {
       "category": "rag-vectordb",
@@ -473,7 +473,7 @@
       "category": "webassembly",
       "ecosystem": "npm",
       "package": "binaryen",
-      "baseline": "130.0.0"
+      "baseline": "131.0.0"
     },
     {
       "category": "webassembly",
