@@ -23,7 +23,7 @@
       "category": "frontend-framework",
       "ecosystem": "npm",
       "package": "nuxt",
-      "baseline": "4.4.8"
+      "baseline": "4.5.0"
     },
     {
       "category": "frontend-framework",
@@ -95,7 +95,7 @@
       "category": "forms",
       "ecosystem": "npm",
       "package": "react-hook-form",
-      "baseline": "7.81.0"
+      "baseline": "7.82.0"
     },
     {
       "category": "ui-components",
@@ -221,7 +221,7 @@
       "category": "package-manager",
       "ecosystem": "npm",
       "package": "pnpm",
-      "baseline": "11.14.0"
+      "baseline": "11.15.0"
     },
     {
       "category": "package-manager",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.12.0"
+      "baseline": "2.13.0"
     },
     {
       "category": "rag-vectordb",
