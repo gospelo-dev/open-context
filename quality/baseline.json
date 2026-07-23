@@ -41,7 +41,7 @@
       "category": "frontend-framework",
       "ecosystem": "npm",
       "package": "react-router",
-      "baseline": "8.2.0"
+      "baseline": "8.3.0"
     },
     {
       "category": "frontend-framework",
@@ -113,7 +113,7 @@
       "category": "ui-components",
       "ecosystem": "npm",
       "package": "shadcn",
-      "baseline": "4.13.0"
+      "baseline": "4.14.0"
     },
     {
       "category": "ui-components",
@@ -221,7 +221,7 @@
       "category": "package-manager",
       "ecosystem": "npm",
       "package": "pnpm",
-      "baseline": "11.15.0"
+      "baseline": "11.16.0"
     },
     {
       "category": "package-manager",
@@ -311,7 +311,7 @@
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "@anthropic-ai/sdk",
-      "baseline": "0.112.1"
+      "baseline": "0.113.0"
     },
     {
       "category": "ai-sdk",
@@ -323,13 +323,13 @@
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "anthropic",
-      "baseline": "0.117.0"
+      "baseline": "0.118.0"
     },
     {
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "openai",
-      "baseline": "2.46.0"
+      "baseline": "2.47.0"
     },
     {
       "category": "mcp",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.14.0"
+      "baseline": "2.15.0"
     },
     {
       "category": "rag-vectordb",
@@ -491,7 +491,7 @@
       "category": "infra-iac",
       "ecosystem": "npm",
       "package": "aws-cdk-lib",
-      "baseline": "2.261.0"
+      "baseline": "2.262.0"
     }
   ]
 }
