@@ -179,7 +179,7 @@
       "category": "lint-format",
       "ecosystem": "pypi",
       "package": "ruff",
-      "baseline": "0.15.20"
+      "baseline": "0.16.0"
     },
     {
       "category": "testing",
@@ -221,7 +221,7 @@
       "category": "package-manager",
       "ecosystem": "npm",
       "package": "pnpm",
-      "baseline": "11.16.0"
+      "baseline": "11.17.0"
     },
     {
       "category": "package-manager",
@@ -311,25 +311,25 @@
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "@anthropic-ai/sdk",
-      "baseline": "0.113.0"
+      "baseline": "0.114.0"
     },
     {
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "openai",
-      "baseline": "6.48.0"
+      "baseline": "6.49.0"
     },
     {
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "anthropic",
-      "baseline": "0.118.0"
+      "baseline": "0.119.0"
     },
     {
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "openai",
-      "baseline": "2.47.0"
+      "baseline": "2.48.0"
     },
     {
       "category": "mcp",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.15.0"
+      "baseline": "2.17.0"
     },
     {
       "category": "rag-vectordb",
