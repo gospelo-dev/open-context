@@ -113,7 +113,7 @@
       "category": "ui-components",
       "ecosystem": "npm",
       "package": "shadcn",
-      "baseline": "4.15.0"
+      "baseline": "4.16.0"
     },
     {
       "category": "ui-components",
@@ -317,7 +317,7 @@
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "openai",
-      "baseline": "6.49.0"
+      "baseline": "7.0.0"
     },
     {
       "category": "ai-sdk",
@@ -329,13 +329,13 @@
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "openai",
-      "baseline": "2.48.0"
+      "baseline": "2.49.0"
     },
     {
       "category": "mcp",
       "ecosystem": "npm",
       "package": "@modelcontextprotocol/sdk",
-      "baseline": "1.29.0"
+      "baseline": "1.30.0"
     },
     {
       "category": "mcp",
