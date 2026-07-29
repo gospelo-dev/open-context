@@ -125,7 +125,7 @@
       "category": "animation",
       "ecosystem": "npm",
       "package": "motion",
-      "baseline": "12.42.2"
+      "baseline": "12.43.0"
     },
     {
       "category": "styling",
@@ -233,7 +233,7 @@
       "category": "package-manager",
       "ecosystem": "pypi",
       "package": "uv",
-      "baseline": "0.11.26"
+      "baseline": "0.12.0"
     },
     {
       "category": "backend-framework",
@@ -317,7 +317,7 @@
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "openai",
-      "baseline": "7.0.0"
+      "baseline": "7.1.0"
     },
     {
       "category": "ai-sdk",
@@ -329,7 +329,7 @@
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "openai",
-      "baseline": "2.49.0"
+      "baseline": "2.50.0"
     },
     {
       "category": "mcp",
@@ -347,7 +347,7 @@
       "category": "mcp",
       "ecosystem": "pypi",
       "package": "mcp",
-      "baseline": "1.28.1"
+      "baseline": "2.0.0"
     },
     {
       "category": "agent",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.18.0"
+      "baseline": "2.19.0"
     },
     {
       "category": "rag-vectordb",
