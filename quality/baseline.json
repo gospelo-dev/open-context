@@ -83,7 +83,7 @@
       "category": "data-fetching",
       "ecosystem": "npm",
       "package": "axios",
-      "baseline": "1.18.1"
+      "baseline": "1.19.0"
     },
     {
       "category": "data-fetching",
@@ -221,7 +221,7 @@
       "category": "package-manager",
       "ecosystem": "npm",
       "package": "pnpm",
-      "baseline": "11.17.0"
+      "baseline": "11.18.0"
     },
     {
       "category": "package-manager",
@@ -245,7 +245,7 @@
       "category": "backend-framework",
       "ecosystem": "pypi",
       "package": "fastapi",
-      "baseline": "0.140.0"
+      "baseline": "0.141.1"
     },
     {
       "category": "backend-framework",
@@ -257,7 +257,7 @@
       "category": "backend-framework",
       "ecosystem": "pypi",
       "package": "uvicorn",
-      "baseline": "0.51.0"
+      "baseline": "0.52.0"
     },
     {
       "category": "http-async",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.19.0"
+      "baseline": "2.21.0"
     },
     {
       "category": "rag-vectordb",
