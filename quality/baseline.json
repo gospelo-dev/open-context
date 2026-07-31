@@ -161,7 +161,7 @@
       "category": "build-tool",
       "ecosystem": "npm",
       "package": "vite",
-      "baseline": "8.1.3"
+      "baseline": "8.2.0"
     },
     {
       "category": "lint-format",
@@ -317,7 +317,7 @@
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "openai",
-      "baseline": "7.1.0"
+      "baseline": "7.2.0"
     },
     {
       "category": "ai-sdk",
@@ -329,7 +329,7 @@
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "openai",
-      "baseline": "2.50.0"
+      "baseline": "2.51.0"
     },
     {
       "category": "mcp",
