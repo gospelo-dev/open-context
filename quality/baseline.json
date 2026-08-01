@@ -95,7 +95,7 @@
       "category": "forms",
       "ecosystem": "npm",
       "package": "react-hook-form",
-      "baseline": "7.83.0"
+      "baseline": "7.84.0"
     },
     {
       "category": "ui-components",
@@ -317,7 +317,7 @@
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "openai",
-      "baseline": "7.2.0"
+      "baseline": "7.3.0"
     },
     {
       "category": "ai-sdk",
@@ -329,7 +329,7 @@
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "openai",
-      "baseline": "2.51.0"
+      "baseline": "2.52.0"
     },
     {
       "category": "mcp",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.21.0"
+      "baseline": "2.22.0"
     },
     {
       "category": "rag-vectordb",
@@ -491,7 +491,7 @@
       "category": "infra-iac",
       "ecosystem": "npm",
       "package": "aws-cdk-lib",
-      "baseline": "2.262.0"
+      "baseline": "2.263.0"
     }
   ]
 }
