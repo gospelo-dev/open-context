@@ -17,7 +17,7 @@
       "category": "frontend-framework",
       "ecosystem": "npm",
       "package": "next",
-      "baseline": "16.2.10"
+      "baseline": "16.3.0"
     },
     {
       "category": "frontend-framework",
@@ -89,7 +89,7 @@
       "category": "data-fetching",
       "ecosystem": "npm",
       "package": "swr",
-      "baseline": "2.4.2"
+      "baseline": "2.5.0"
     },
     {
       "category": "forms",
@@ -221,7 +221,7 @@
       "category": "package-manager",
       "ecosystem": "npm",
       "package": "pnpm",
-      "baseline": "11.18.0"
+      "baseline": "11.20.0"
     },
     {
       "category": "package-manager",
@@ -239,7 +239,7 @@
       "category": "backend-framework",
       "ecosystem": "npm",
       "package": "hono",
-      "baseline": "4.12.27"
+      "baseline": "4.13.0"
     },
     {
       "category": "backend-framework",
@@ -317,7 +317,7 @@
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "openai",
-      "baseline": "7.3.0"
+      "baseline": "7.4.0"
     },
     {
       "category": "ai-sdk",
@@ -329,7 +329,7 @@
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "openai",
-      "baseline": "2.52.0"
+      "baseline": "2.53.0"
     },
     {
       "category": "mcp",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.22.0"
+      "baseline": "2.23.0"
     },
     {
       "category": "rag-vectordb",
