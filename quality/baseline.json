@@ -107,7 +107,7 @@
       "category": "ui-components",
       "ecosystem": "npm",
       "package": "@mui/material",
-      "baseline": "9.2.0"
+      "baseline": "9.3.0"
     },
     {
       "category": "ui-components",
@@ -125,7 +125,7 @@
       "category": "animation",
       "ecosystem": "npm",
       "package": "motion",
-      "baseline": "12.43.0"
+      "baseline": "13.0.0"
     },
     {
       "category": "styling",
@@ -143,7 +143,7 @@
       "category": "build-tool",
       "ecosystem": "npm",
       "package": "core-js",
-      "baseline": "3.49.0"
+      "baseline": "3.50.0"
     },
     {
       "category": "build-tool",
@@ -251,7 +251,7 @@
       "category": "backend-framework",
       "ecosystem": "pypi",
       "package": "starlette",
-      "baseline": "1.3.1"
+      "baseline": "1.4.1"
     },
     {
       "category": "backend-framework",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.23.0"
+      "baseline": "2.24.0"
     },
     {
       "category": "rag-vectordb",
