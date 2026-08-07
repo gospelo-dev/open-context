@@ -11,7 +11,7 @@
       "category": "frontend-framework",
       "ecosystem": "npm",
       "package": "astro",
-      "baseline": "7.1.0"
+      "baseline": "7.2.0"
     },
     {
       "category": "frontend-framework",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.24.0"
+      "baseline": "2.25.0"
     },
     {
       "category": "rag-vectordb",
@@ -413,7 +413,7 @@
       "category": "rag-ml",
       "ecosystem": "pypi",
       "package": "sentence-transformers",
-      "baseline": "5.6.0"
+      "baseline": "5.7.0"
     },
     {
       "category": "rag-ml",
