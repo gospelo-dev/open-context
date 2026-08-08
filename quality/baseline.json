@@ -95,7 +95,7 @@
       "category": "forms",
       "ecosystem": "npm",
       "package": "react-hook-form",
-      "baseline": "7.84.0"
+      "baseline": "7.85.0"
     },
     {
       "category": "ui-components",
@@ -311,7 +311,7 @@
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "@anthropic-ai/sdk",
-      "baseline": "0.115.0"
+      "baseline": "0.116.0"
     },
     {
       "category": "ai-sdk",
@@ -323,7 +323,7 @@
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "anthropic",
-      "baseline": "0.120.0"
+      "baseline": "0.121.0"
     },
     {
       "category": "ai-sdk",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.25.0"
+      "baseline": "2.26.0"
     },
     {
       "category": "rag-vectordb",
