@@ -221,7 +221,7 @@
       "category": "package-manager",
       "ecosystem": "npm",
       "package": "pnpm",
-      "baseline": "11.20.0"
+      "baseline": "11.21.0"
     },
     {
       "category": "package-manager",
