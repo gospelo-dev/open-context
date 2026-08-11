@@ -125,7 +125,7 @@
       "category": "animation",
       "ecosystem": "npm",
       "package": "motion",
-      "baseline": "13.0.0"
+      "baseline": "13.1.0"
     },
     {
       "category": "styling",
@@ -425,7 +425,7 @@
       "category": "rag-ml",
       "ecosystem": "pypi",
       "package": "transformers",
-      "baseline": "5.14.0"
+      "baseline": "5.15.0"
     },
     {
       "category": "orm-db",
@@ -491,7 +491,7 @@
       "category": "infra-iac",
       "ecosystem": "npm",
       "package": "aws-cdk-lib",
-      "baseline": "2.263.0"
+      "baseline": "2.264.0"
     }
   ]
 }
