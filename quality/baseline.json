@@ -329,7 +329,7 @@
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "openai",
-      "baseline": "2.53.0"
+      "baseline": "2.54.0"
     },
     {
       "category": "mcp",
