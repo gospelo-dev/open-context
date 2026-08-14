@@ -113,7 +113,7 @@
       "category": "ui-components",
       "ecosystem": "npm",
       "package": "shadcn",
-      "baseline": "4.17.0"
+      "baseline": "4.18.0"
     },
     {
       "category": "ui-components",
@@ -311,7 +311,7 @@
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "@anthropic-ai/sdk",
-      "baseline": "0.116.0"
+      "baseline": "0.117.1"
     },
     {
       "category": "ai-sdk",
@@ -323,7 +323,7 @@
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "anthropic",
-      "baseline": "0.121.0"
+      "baseline": "0.122.0"
     },
     {
       "category": "ai-sdk",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.28.0"
+      "baseline": "2.29.0"
     },
     {
       "category": "rag-vectordb",
@@ -395,7 +395,7 @@
       "category": "rag-vectordb",
       "ecosystem": "pypi",
       "package": "weaviate-client",
-      "baseline": "4.22.0"
+      "baseline": "4.23.0"
     },
     {
       "category": "rag-ml",
@@ -473,7 +473,7 @@
       "category": "webassembly",
       "ecosystem": "npm",
       "package": "binaryen",
-      "baseline": "131.0.0"
+      "baseline": "132.0.0"
     },
     {
       "category": "webassembly",
@@ -491,7 +491,7 @@
       "category": "infra-iac",
       "ecosystem": "npm",
       "package": "aws-cdk-lib",
-      "baseline": "2.264.0"
+      "baseline": "2.265.0"
     }
   ]
 }
