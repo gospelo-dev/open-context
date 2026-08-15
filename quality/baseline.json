@@ -329,7 +329,7 @@
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "openai",
-      "baseline": "3.0.0"
+      "baseline": "3.1.0"
     },
     {
       "category": "mcp",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.29.0"
+      "baseline": "2.30.0"
     },
     {
       "category": "rag-vectordb",
