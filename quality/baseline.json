@@ -317,7 +317,7 @@
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "openai",
-      "baseline": "7.4.0"
+      "baseline": "7.5.0"
     },
     {
       "category": "ai-sdk",
@@ -329,7 +329,7 @@
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "openai",
-      "baseline": "3.1.0"
+      "baseline": "3.2.0"
     },
     {
       "category": "mcp",
@@ -419,7 +419,7 @@
       "category": "rag-ml",
       "ecosystem": "pypi",
       "package": "tiktoken",
-      "baseline": "0.13.0"
+      "baseline": "0.14.0"
     },
     {
       "category": "rag-ml",
