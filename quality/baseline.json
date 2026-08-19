@@ -329,7 +329,7 @@
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "openai",
-      "baseline": "3.2.0"
+      "baseline": "3.3.0"
     },
     {
       "category": "mcp",
@@ -413,7 +413,7 @@
       "category": "rag-ml",
       "ecosystem": "pypi",
       "package": "sentence-transformers",
-      "baseline": "5.7.0"
+      "baseline": "6.0.0"
     },
     {
       "category": "rag-ml",
