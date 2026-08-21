@@ -209,7 +209,7 @@
       "category": "package-manager",
       "ecosystem": "npm",
       "package": "bun",
-      "baseline": "1.3.14"
+      "baseline": "1.4.0"
     },
     {
       "category": "package-manager",
@@ -323,7 +323,7 @@
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "anthropic",
-      "baseline": "0.125.0"
+      "baseline": "1.0.0"
     },
     {
       "category": "ai-sdk",
@@ -485,7 +485,7 @@
       "category": "webassembly",
       "ecosystem": "pypi",
       "package": "wasmtime",
-      "baseline": "47.0.1"
+      "baseline": "48.0.0"
     },
     {
       "category": "infra-iac",
