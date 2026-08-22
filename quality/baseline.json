@@ -95,7 +95,7 @@
       "category": "forms",
       "ecosystem": "npm",
       "package": "react-hook-form",
-      "baseline": "7.85.0"
+      "baseline": "7.86.0"
     },
     {
       "category": "ui-components",
@@ -113,7 +113,7 @@
       "category": "ui-components",
       "ecosystem": "npm",
       "package": "shadcn",
-      "baseline": "4.18.0"
+      "baseline": "4.19.0"
     },
     {
       "category": "ui-components",
@@ -167,7 +167,7 @@
       "category": "lint-format",
       "ecosystem": "npm",
       "package": "eslint",
-      "baseline": "10.8.0"
+      "baseline": "10.9.0"
     },
     {
       "category": "lint-format",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.32.0"
+      "baseline": "2.33.0"
     },
     {
       "category": "rag-vectordb",
