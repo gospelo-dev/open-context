@@ -77,7 +77,7 @@
       "category": "data-fetching",
       "ecosystem": "npm",
       "package": "@tanstack/react-query",
-      "baseline": "5.101.2"
+      "baseline": "5.102.0"
     },
     {
       "category": "data-fetching",
