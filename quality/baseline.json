@@ -221,7 +221,7 @@
       "category": "package-manager",
       "ecosystem": "npm",
       "package": "pnpm",
-      "baseline": "11.22.0"
+      "baseline": "11.23.0"
     },
     {
       "category": "package-manager",
@@ -347,7 +347,7 @@
       "category": "mcp",
       "ecosystem": "pypi",
       "package": "mcp",
-      "baseline": "2.0.0"
+      "baseline": "2.1.0"
     },
     {
       "category": "agent",
@@ -401,7 +401,7 @@
       "category": "rag-ml",
       "ecosystem": "pypi",
       "package": "haystack-ai",
-      "baseline": "3.0.0"
+      "baseline": "3.1.0"
     },
     {
       "category": "rag-ml",
