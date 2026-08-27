@@ -83,7 +83,7 @@
       "category": "data-fetching",
       "ecosystem": "npm",
       "package": "axios",
-      "baseline": "1.19.0"
+      "baseline": "1.20.0"
     },
     {
       "category": "data-fetching",
@@ -281,7 +281,7 @@
       "category": "cli-tui",
       "ecosystem": "pypi",
       "package": "click",
-      "baseline": "8.4.2"
+      "baseline": "8.5.0"
     },
     {
       "category": "cli-tui",
@@ -311,25 +311,25 @@
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "@anthropic-ai/sdk",
-      "baseline": "0.120.0"
+      "baseline": "0.121.0"
     },
     {
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "openai",
-      "baseline": "7.5.0"
+      "baseline": "7.7.0"
     },
     {
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "anthropic",
-      "baseline": "1.0.0"
+      "baseline": "1.1.0"
     },
     {
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "openai",
-      "baseline": "3.3.0"
+      "baseline": "3.5.0"
     },
     {
       "category": "mcp",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.34.0"
+      "baseline": "2.35.1"
     },
     {
       "category": "rag-vectordb",
@@ -425,7 +425,7 @@
       "category": "rag-ml",
       "ecosystem": "pypi",
       "package": "transformers",
-      "baseline": "5.15.0"
+      "baseline": "5.16.1"
     },
     {
       "category": "orm-db",
