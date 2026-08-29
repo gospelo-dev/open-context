@@ -47,7 +47,7 @@
       "category": "frontend-framework",
       "ecosystem": "npm",
       "package": "svelte",
-      "baseline": "5.56.4"
+      "baseline": "5.57.0"
     },
     {
       "category": "frontend-framework",
@@ -101,7 +101,7 @@
       "category": "ui-components",
       "ecosystem": "npm",
       "package": "@chakra-ui/react",
-      "baseline": "3.36.0"
+      "baseline": "3.37.0"
     },
     {
       "category": "ui-components",
@@ -299,7 +299,7 @@
       "category": "validation",
       "ecosystem": "npm",
       "package": "zod",
-      "baseline": "4.4.3"
+      "baseline": "4.5.2"
     },
     {
       "category": "validation",
@@ -329,7 +329,7 @@
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "openai",
-      "baseline": "3.5.0"
+      "baseline": "3.6.0"
     },
     {
       "category": "mcp",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.35.1"
+      "baseline": "2.36.0"
     },
     {
       "category": "rag-vectordb",
