@@ -221,7 +221,7 @@
       "category": "package-manager",
       "ecosystem": "npm",
       "package": "pnpm",
-      "baseline": "11.24.0"
+      "baseline": "11.25.0"
     },
     {
       "category": "package-manager",
@@ -341,7 +341,7 @@
       "category": "mcp",
       "ecosystem": "pypi",
       "package": "fastmcp",
-      "baseline": "3.4.2"
+      "baseline": "4.0.0"
     },
     {
       "category": "mcp",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.36.0"
+      "baseline": "2.37.0"
     },
     {
       "category": "rag-vectordb",
