@@ -311,25 +311,25 @@
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "@anthropic-ai/sdk",
-      "baseline": "0.122.0"
+      "baseline": "0.123.0"
     },
     {
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "openai",
-      "baseline": "7.8.0"
+      "baseline": "7.9.0"
     },
     {
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "anthropic",
-      "baseline": "1.2.0"
+      "baseline": "1.3.0"
     },
     {
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "openai",
-      "baseline": "3.6.0"
+      "baseline": "3.7.0"
     },
     {
       "category": "mcp",
