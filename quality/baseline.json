@@ -113,7 +113,7 @@
       "category": "ui-components",
       "ecosystem": "npm",
       "package": "shadcn",
-      "baseline": "4.19.0"
+      "baseline": "4.20.1"
     },
     {
       "category": "ui-components",
@@ -125,7 +125,7 @@
       "category": "animation",
       "ecosystem": "npm",
       "package": "motion",
-      "baseline": "13.1.0"
+      "baseline": "13.2.0"
     },
     {
       "category": "styling",
@@ -263,7 +263,7 @@
       "category": "http-async",
       "ecosystem": "pypi",
       "package": "anyio",
-      "baseline": "4.14.1"
+      "baseline": "4.15.0"
     },
     {
       "category": "http-async",
@@ -491,7 +491,7 @@
       "category": "infra-iac",
       "ecosystem": "npm",
       "package": "aws-cdk-lib",
-      "baseline": "2.267.0"
+      "baseline": "2.268.0"
     }
   ]
 }
