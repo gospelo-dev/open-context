@@ -11,7 +11,7 @@
       "category": "frontend-framework",
       "ecosystem": "npm",
       "package": "astro",
-      "baseline": "7.2.0"
+      "baseline": "7.3.1"
     },
     {
       "category": "frontend-framework",
@@ -197,7 +197,7 @@
       "category": "testing",
       "ecosystem": "npm",
       "package": "vitest",
-      "baseline": "4.1.9"
+      "baseline": "5.0.0"
     },
     {
       "category": "testing",
@@ -317,7 +317,7 @@
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "openai",
-      "baseline": "7.9.0"
+      "baseline": "7.10.0"
     },
     {
       "category": "ai-sdk",
@@ -329,7 +329,7 @@
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "openai",
-      "baseline": "3.7.0"
+      "baseline": "3.8.0"
     },
     {
       "category": "mcp",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.37.0"
+      "baseline": "2.38.0"
     },
     {
       "category": "rag-vectordb",
@@ -377,7 +377,7 @@
       "category": "rag-vectordb",
       "ecosystem": "pypi",
       "package": "pinecone",
-      "baseline": "9.1.0"
+      "baseline": "10.0.0"
     },
     {
       "category": "rag-vectordb",
