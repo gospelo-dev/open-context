@@ -347,7 +347,7 @@
       "category": "mcp",
       "ecosystem": "pypi",
       "package": "mcp",
-      "baseline": "2.1.0"
+      "baseline": "2.2.0"
     },
     {
       "category": "agent",
