@@ -65,7 +65,7 @@
       "category": "state-management",
       "ecosystem": "npm",
       "package": "jotai",
-      "baseline": "2.20.1"
+      "baseline": "3.0.0"
     },
     {
       "category": "state-management",
@@ -317,7 +317,7 @@
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "openai",
-      "baseline": "7.10.0"
+      "baseline": "7.12.1"
     },
     {
       "category": "ai-sdk",
@@ -329,7 +329,7 @@
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "openai",
-      "baseline": "3.8.0"
+      "baseline": "3.10.0"
     },
     {
       "category": "mcp",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.40.0"
+      "baseline": "2.41.0"
     },
     {
       "category": "rag-vectordb",
