@@ -125,7 +125,7 @@
       "category": "animation",
       "ecosystem": "npm",
       "package": "motion",
-      "baseline": "13.2.0"
+      "baseline": "13.3.0"
     },
     {
       "category": "styling",
@@ -257,7 +257,7 @@
       "category": "backend-framework",
       "ecosystem": "pypi",
       "package": "uvicorn",
-      "baseline": "0.52.0"
+      "baseline": "0.53.0"
     },
     {
       "category": "http-async",
@@ -329,7 +329,7 @@
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "openai",
-      "baseline": "3.13.0"
+      "baseline": "3.14.0"
     },
     {
       "category": "mcp",
