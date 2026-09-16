@@ -41,7 +41,7 @@
       "category": "frontend-framework",
       "ecosystem": "npm",
       "package": "react-router",
-      "baseline": "8.3.0"
+      "baseline": "8.4.0"
     },
     {
       "category": "frontend-framework",
@@ -311,7 +311,7 @@
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "@anthropic-ai/sdk",
-      "baseline": "0.125.0"
+      "baseline": "0.126.0"
     },
     {
       "category": "ai-sdk",
@@ -323,7 +323,7 @@
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "anthropic",
-      "baseline": "1.5.0"
+      "baseline": "1.6.0"
     },
     {
       "category": "ai-sdk",
