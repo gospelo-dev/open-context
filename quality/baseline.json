@@ -77,7 +77,7 @@
       "category": "data-fetching",
       "ecosystem": "npm",
       "package": "@tanstack/react-query",
-      "baseline": "5.102.0"
+      "baseline": "5.103.1"
     },
     {
       "category": "data-fetching",
@@ -125,7 +125,7 @@
       "category": "animation",
       "ecosystem": "npm",
       "package": "motion",
-      "baseline": "13.3.0"
+      "baseline": "13.4.0"
     },
     {
       "category": "styling",
@@ -317,7 +317,7 @@
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "openai",
-      "baseline": "7.15.0"
+      "baseline": "7.17.0"
     },
     {
       "category": "ai-sdk",
