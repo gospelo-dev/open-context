@@ -317,7 +317,7 @@
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "openai",
-      "baseline": "7.17.0"
+      "baseline": "7.18.0"
     },
     {
       "category": "ai-sdk",
@@ -329,7 +329,7 @@
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "openai",
-      "baseline": "3.14.0"
+      "baseline": "3.15.0"
     },
     {
       "category": "mcp",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.43.0"
+      "baseline": "2.44.0"
     },
     {
       "category": "rag-vectordb",
@@ -491,7 +491,7 @@
       "category": "infra-iac",
       "ecosystem": "npm",
       "package": "aws-cdk-lib",
-      "baseline": "2.269.0"
+      "baseline": "2.270.0"
     }
   ]
 }
