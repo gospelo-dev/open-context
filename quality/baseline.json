@@ -221,13 +221,13 @@
       "category": "package-manager",
       "ecosystem": "npm",
       "package": "pnpm",
-      "baseline": "12.4.1"
+      "baseline": "12.5.1"
     },
     {
       "category": "package-manager",
       "ecosystem": "pypi",
       "package": "poetry",
-      "baseline": "2.4.1"
+      "baseline": "2.5.0"
     },
     {
       "category": "package-manager",
@@ -317,7 +317,7 @@
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "openai",
-      "baseline": "7.19.0"
+      "baseline": "7.20.0"
     },
     {
       "category": "ai-sdk",
@@ -359,7 +359,7 @@
       "category": "agent",
       "ecosystem": "pypi",
       "package": "pydantic-ai",
-      "baseline": "2.45.0"
+      "baseline": "2.46.0"
     },
     {
       "category": "rag-vectordb",
