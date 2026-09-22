@@ -317,7 +317,7 @@
       "category": "ai-sdk",
       "ecosystem": "npm",
       "package": "openai",
-      "baseline": "7.20.0"
+      "baseline": "7.21.0"
     },
     {
       "category": "ai-sdk",
@@ -329,7 +329,7 @@
       "category": "ai-sdk",
       "ecosystem": "pypi",
       "package": "openai",
-      "baseline": "3.16.2"
+      "baseline": "3.17.0"
     },
     {
       "category": "mcp",
@@ -485,7 +485,7 @@
       "category": "webassembly",
       "ecosystem": "pypi",
       "package": "wasmtime",
-      "baseline": "48.0.0"
+      "baseline": "49.0.0"
     },
     {
       "category": "infra-iac",
